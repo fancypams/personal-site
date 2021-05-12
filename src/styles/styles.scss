@@ -366,8 +366,11 @@ form {
 
 .project-img-wrapper {
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row; 
+  flex-wrap: wrap;
+  flex-direction: row;
+  img {
+    padding-bottom: 10px;
+  }
 }
 
 .project-gif {
@@ -439,7 +442,20 @@ form {
     opacity: 1; } 
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+  .work-grid {
+    grid-template-columns: 100%;
+    text-align: center; 
+  }
+
+  .project-gif {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px; 
+  }
+
   .welcome-content h1, .main-heading {
     line-height: 55px !important; 
   }
@@ -489,26 +505,13 @@ form {
     line-height: 20px; 
   }
 
-  .work-grid {
-    grid-template-columns: 100%;
-    text-align: center; 
-  }
-
   .project-img-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-self: center;
+    align-items: center;
     justify-content: center;
     width: 100%; 
-  }
-
-  .project-gif {
-    width: 100%;
-    align-self: center;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px; 
   }
 
   @keyframes easier-light {
