@@ -330,6 +330,17 @@ form {
   }
 }
 
+.skill-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 10px 0 10px 0;
+  .skill-item {
+    padding: 10px 25px 10px 25px;
+  }
+}
+
 .skills-used {
   font-style: italic;
   font-size: 11px;
@@ -456,6 +467,36 @@ form {
     margin-bottom: 10px; 
   }
 
+  .resume-content {
+    text-align: left;
+    .resume-name, .resume-goal {
+      padding: 0 25px 0 25px;
+    }
+  }
+
+  .two-cols {
+    flex-wrap: wrap;
+    .col-1 {
+      width: 100%; 
+      padding: 0 5px 0 5px;
+      text-align: left;
+    }
+    .col-2 {
+      width: 100%;
+      padding: 0 35px 0 35px;
+      text-align: left;
+    }
+  }
+
+  .three-cols {
+    flex-wrap: wrap; 
+    .col-1, .col-2, .col-3 {
+      width: 100%; 
+      padding: 0 25px 0 25px;
+      text-align: left;
+    }
+  }
+
   .welcome-content h1, .main-heading {
     line-height: 55px !important; 
   }
@@ -486,21 +527,6 @@ form {
     display: none !important; 
   }
 
-  .three-cols {
-    flex-wrap: wrap; 
-    .col-1 {
-      min-width: 350px; 
-    .col-2 {
-      width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
-      text-align: justify; 
-    }
-    .col-3 {
-      width: 100%; 
-    }
-  }
-
   .job-title, .employer {
     line-height: 20px; 
   }
@@ -524,5 +550,4 @@ form {
       margin-left: -5px; 
     } 
   } 
-}
 }
