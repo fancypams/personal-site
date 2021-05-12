@@ -1,0 +1,525 @@
+$yellow: #f2b72c;
+$blue: #79e0e0;
+$white: #ffffff;
+$black: #000000;
+$gray: #8a8a8a;
+$lt-gray: #efefef;
+
+html, body {
+  height: 100%;
+  background-color: $white;
+  font-family: "Roboto", sans-serif;
+  color: $black;
+  margin: 0;
+  padding: 0; 
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;  
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Sans Pro", sans-serif; 
+}
+  
+h1 {
+    font-size: 3em; 
+}
+  
+h2 {
+    font-style: italic; 
+}
+  
+a {
+  text-decoration: underline;
+  color: $black; 
+  :hover {
+    color: $yellow; 
+  }
+  :visited {
+    color: $black; 
+  }
+  :active {
+    color: $black;
+  }
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  background-color: $yellow;
+  width: 100%; 
+  a {
+    padding: 10px;
+    background-color: $black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: bold;
+    font-size: 12px;
+    :hover, :active {
+      background-color: $yellow; 
+    }
+  }
+}
+
+.welcome-content {
+  height: 400px;
+  width: 100vw;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background-image: url("assets/fun-pattern.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -32px; 
+  .main-heading {
+    font-size: 5em;
+    line-height: 12px;
+    -webkit-animation: rotateY 1s linear;
+    animation: rotateY 1s linear;
+    animation-name: easier;
+    animation-duration: 1s; 
+  }
+  h2 {
+    -webkit-animation: rotateY 1s linear;
+    animation: rotateY 1s linear;
+    animation-name: easy;
+    animation-duration: 1.5s; 
+  }
+}
+
+.welcome-about-me {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.color-block {
+  background-color: $black;
+  text-align: center;
+  width: 50%;
+  height: 450px;
+  img {
+    padding: 25px 15px 5px 15px;
+    margin-top: -25px;
+    width: 50%;
+    border: $yellow solid 5px;
+    border-radius: 250px;
+    animation-name: colorpulse;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+}
+
+.color-block-contact {
+  background-color: $white;
+  text-align: center;
+  height: 330px;
+  width: 35%; 
+  img {
+    padding: 25px 15px 5px 15px;
+    margin-top: 30px;
+    width: 90%;
+    border: none;
+    border-radius: 500px; 
+  }
+}
+
+.text-block {
+  display: table-cell;
+  animation-name: fade;
+  animation-duration: 1s;
+  vertical-align: bottom;
+  text-align: left;
+  width: 50%;
+  padding: 25px; 
+  .photo-title {
+    z-index: 1;
+    -webkit-animation: rotateY 1s linear;
+    animation: rotateY 1s linear;
+    animation-name: easier-light;
+    animation-duration: 2s;
+    color: $yellow;
+    font-size: 4em;
+    line-height: 4px;
+    margin-left: -115px; 
+  }
+}
+
+.text-block-contact {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: left;
+  height: 650px;
+  width: 50%;
+  padding: 25px; 
+  .photo-title {
+    color: $yellow;
+    font-size: 4em;
+    line-height: 4px;
+    margin-left: -115px; 
+  }
+}
+
+.resume-content {
+  text-align: center; 
+}
+
+.resume-name {
+  -webkit-animation: rotateY 1s linear;
+  animation: rotateY 1.5s linear;
+  animation-name: easier;
+  animation-duration: 1.5s; 
+}
+
+.resume-goal {
+  -webkit-animation: rotateY 1.5s linear;
+  animation: rotateY 1.5s linear;
+  animation-name: easy;
+  animation-duration: 1.5s; 
+}
+
+.sections {
+  animation-name: fade;
+  animation-duration: 2s; 
+}
+
+.sect-title {
+  background-color: $yellow;
+  color: $white;
+  max-width: 400px;
+  text-align: left;
+  margin-left: 20px;
+  padding: 0 10px 0 10px; 
+}
+
+.job-title {
+  line-height: 10px; 
+}
+
+.employer {
+  font-style: italic;
+  line-height: 10px; 
+}
+
+.three-cols {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  width: 100%; 
+  .col-1 {
+    width: 25%;
+    align-self: center; 
+  }
+  .col-2 {
+    width: 55%;
+    text-align: left; 
+  }
+  .col-3 {
+    width: 20%;
+    line-height: 14px;
+    align-self: center; 
+  }
+}
+
+.two-cols {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  width: 100%; 
+  .col-1 {
+    width: 80%;
+    align-self: center;
+    text-align: left; 
+    h3 {
+      padding-left: 25px; 
+    }
+    p {
+      padding-left: 55px;
+    }
+  }
+  .col-2 {
+    width: 20%;
+    align-self: center;
+    text-align: center; 
+  }
+}
+
+.one-col {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: left;
+  align-self: center;
+  width: 100%; 
+  p {
+    text-align: left;
+    padding: 0 25px 0 25px; 
+  }
+}
+
+form {
+  label {
+    margin-bottom: 15px; 
+  }
+  input {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    border: solid $gray 1px;
+    margin-bottom: 15px; 
+  }
+  textarea {
+    width: 100%;
+    height: 200px !important;
+    border-radius: 5px;
+    height: 20px;
+    border: solid $gray 1px; 
+  }
+  button {
+    margin-top: 5px;
+    width: 101%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid $white 1px;
+    background-color: $yellow;
+    color: $white;
+    font-weight: bold;
+    font-size: 14px; 
+    :hover {
+      background-color: $lt-gray; 
+    }
+  }
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  margin: 20px;
+  justify-content: center;
+  grid-gap: 10px;
+  animation-name: fade;
+  animation-duration: 4s; 
+}
+
+.work-thumbnail {
+  max-width: 200px;
+  border-radius: 50%;
+  border: $lt-gray solid 3px; 
+  :hover {
+    opacity: 50%; 
+  }
+}
+
+.skills-used {
+  font-style: italic;
+  font-size: 11px;
+  margin-top: -15px; 
+}
+
+.page-title {
+  text-align: center;
+  animation-name: easy;
+  animation-duration: 2s; 
+}
+
+.page-subtitle {
+  text-align: center;
+  margin-top: -20px;
+  animation-name: easier;
+  animation-duration: 2s; 
+}
+
+.footer {
+  background-color: $gray;
+  color: $white;
+  padding: 10px;
+  width: 100vw;
+  display: table-cell;
+  vertical-align: middle; 
+  flex-shrink: 0;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 12px; 
+}
+
+.project-img-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row; 
+}
+
+.project-gif {
+  max-width: 300px;
+  margin-right: 15px; 
+}
+
+@keyframes colorpulse {
+  0% {
+    border-color: $yellow; 
+  }
+  50% {
+    border-color: $blue; 
+  }
+  100% {
+    border-color: $yellow; 
+  } 
+}
+
+@keyframes easy {
+  0% {
+    opacity: 0;
+    margin-right: 300px; }
+  100% {
+    opacity: 1;
+    margin-right: 0; } 
+}
+
+@keyframes easy-light {
+  0% {
+    opacity: 0;
+    margin-right: 100px; }
+  100% {
+    opacity: 1;
+    margin-right: 0; } 
+}
+
+@keyframes easy-top {
+  0% {
+    opacity: 0;
+    margin-top: -50px; }
+  100% {
+    opacity: 1;
+    margin-top: 0; } 
+}
+
+@keyframes easier {
+  0% {
+    opacity: 0;
+    margin-left: 300px; }
+  100% {
+    opacity: 1;
+    margin-left: 0; } 
+}
+
+@keyframes easier-light {
+  0% {
+    opacity: 0;
+    margin-left: 0px; }
+  100% {
+    opacity: 1;
+    margin-left: -115px; } 
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } 
+}
+
+@media only screen and (max-width: 700px) {
+  .welcome-content h1, .main-heading {
+    line-height: 55px !important; 
+  }
+
+  .text-block .photo-title {
+    line-height: 55px;
+    margin-left: -5px;
+    margin-top: -10px;
+    margin-bottom: -10px; 
+  }
+
+  .color-block img {
+    margin-top: 50px;
+    width: 90%; 
+  }
+
+  .text-block-contact {
+    width: 100%;
+    height: 750px; 
+    .photo-title {
+      margin-left: 0px;
+      line-height: 55px;
+      width: 100%; 
+    }
+  }
+
+  .color-block-contact, .color-block-contact img {
+    display: none !important; 
+  }
+
+  .three-cols {
+    flex-wrap: wrap; 
+    .col-1 {
+      min-width: 350px; 
+    .col-2 {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: justify; 
+    }
+    .col-3 {
+      width: 100%; 
+    }
+  }
+
+  .job-title, .employer {
+    line-height: 20px; 
+  }
+
+  .work-grid {
+    grid-template-columns: 100%;
+    text-align: center; 
+  }
+
+  .project-img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: 100%; 
+  }
+
+  .project-gif {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px; 
+  }
+
+  @keyframes easier-light {
+    0% {
+      opacity: 0;
+      margin-left: -10px; 
+    }
+    100% {
+      opacity: 1;
+      margin-left: -5px; 
+    } 
+  } 
+}
+}
