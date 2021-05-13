@@ -16,8 +16,8 @@ const routes = [
     component: Resume,
   },
   {
-    path: "/work",
-    name: "Work",
+    path: "/projects",
+    name: "Projects",
     component: Work,
   },
   {
