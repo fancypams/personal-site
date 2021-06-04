@@ -5,12 +5,14 @@
 
       <div class="work-grid">
         <div class="work-sample">
-          <img class="work-thumbnail" src="@/assets/doge-site.png"/>
+          <a href="https://doge.pamelamontanez.com" target="_blank">
+            <img class="work-thumbnail" src="@/assets/doge-site.png"/>
+          </a>
         </div>
         <div>
           <h2>Doge Coin Calculator</h2>
           <p>
-            Doge Coin is the meme Crypto everyone loves to joke about... so I made a little calculator to see how much your shares just might be worth. For this, I use an API that will return the current Doge price. The user inputs a number of shares and the USD value will be output on the screen.
+            Doge Coin is the meme Crypto everyone loves to joke about... so I made a little calculator to see how much your shares just might be worth. For this, I use an API that will return the current Doge price. The user inputs a number of shares and the USD value will be output on the screen. Click the image to try it out.
           </p>
           <br/>
           <br />
@@ -39,9 +41,7 @@
           </div>
 
           <div class="work-sample">
-            <a href="https://bnbcleaningco.com">
-              <img class="work-thumbnail" src="@/assets/memory-game.png"/>
-            </a>
+            <img class="work-thumbnail" src="@/assets/memory-game.png"/>
           </div>
           <div>
             <h2>30Rock Themed Games</h2>
