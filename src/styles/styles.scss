@@ -1,4 +1,5 @@
 $yellow: #f2b72c;
+$lt-yellow: #f7e9c6;
 $blue: #79e0e0;
 $white: #ffffff;
 $black: #000000;
@@ -91,12 +92,13 @@ a {
     animation-name: easier;
     animation-duration: 1s; 
   }
-  h2 {
-    -webkit-animation: rotateY 1s linear;
-    animation: rotateY 1s linear;
-    animation-name: easy;
-    animation-duration: 1.5s; 
-  }
+}
+
+.transition {
+  -webkit-animation: rotateY 1s linear;
+  animation: rotateY 1s linear;
+  animation-name: easy;
+  animation-duration: 1.5s; 
 }
 
 .welcome-about-me {
@@ -175,27 +177,19 @@ a {
   }
 }
 
-.resume-content {
+.resume-content, .work-content {
   text-align: center; 
+  max-width: 1000px;
+  margin: auto;
 }
 
-.resume-name {
-  -webkit-animation: rotateY 1s linear;
-  animation: rotateY 1.5s linear;
-  animation-name: easier;
-  animation-duration: 1.5s; 
+.skills { 
+  flex-grow: 1;
+  align-content: center;
+  margin-top: 20px;
 }
-
-.resume-goal {
-  -webkit-animation: rotateY 1.5s linear;
-  animation: rotateY 1.5s linear;
-  animation-name: easy;
-  animation-duration: 1.5s; 
-}
-
-.sections {
-  animation-name: fade;
-  animation-duration: 2s; 
+.education { 
+  flex-grow: 1; 
 }
 
 .sect-title {
@@ -207,13 +201,8 @@ a {
   padding: 0 10px 0 10px; 
 }
 
-.job-title {
-  line-height: 10px; 
-}
-
 .employer {
   font-style: italic;
-  line-height: 10px; 
 }
 
 .three-cols {
@@ -312,13 +301,12 @@ form {
 
 .work-grid {
   display: grid;
+  text-align: left;
   grid-template-columns: 20% 80%;
   align-items: center;
   margin: 20px;
   justify-content: center;
-  grid-gap: 10px;
-  animation-name: fade;
-  animation-duration: 4s; 
+  grid-gap: 40px;
 }
 
 .work-thumbnail {
@@ -335,7 +323,7 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  margin: 10px 0 10px 0;
+  margin: 0px 0 10px 0;
   .skill-item {
     padding: 10px 25px 10px 25px;
   }
@@ -349,15 +337,11 @@ form {
 
 .page-title {
   text-align: center;
-  animation-name: easy;
-  animation-duration: 2s; 
 }
 
 .page-subtitle {
   text-align: center;
   margin-top: -20px;
-  animation-name: easier;
-  animation-duration: 2s; 
 }
 
 .footer {
@@ -538,6 +522,14 @@ form {
     align-items: center;
     justify-content: center;
     width: 100%; 
+  }
+
+  .sections {
+    flex-wrap: wrap;
+  }
+
+  .skills {
+    margin: auto;
   }
 
   @keyframes easier-light {

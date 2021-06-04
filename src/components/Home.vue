@@ -2,7 +2,7 @@
   <div class="hello">
     <div id="welcome-content" class="welcome-content">
         <h1 class="main-heading">Welcome</h1>
-        <h2>I am a Front End Developer focusing on human driven solutions.</h2>
+        <h2 class="transition">I am a Front End Developer focusing on human driven solutions.</h2>
     </div>
 
     <div id="welcome-about-me" class="welcome-about-me">
