@@ -1,27 +1,20 @@
 <template>
-    <div>
-        <h1 class="page-title">Recent Work</h1>
-    <h2 class="page-subtitle">Here are a few projects I've worked on lately.</h2>
+    <div class="work-content">
+      <h1 class="page-title">Recent Work</h1>
+      <h2 class="page-subtitle">Here are a few personal projects I've worked on lately.</h2>
 
       <div class="work-grid">
         <div class="work-sample">
-          <img class="work-thumbnail" src="@/assets/oreilly.png"/>
+          <img class="work-thumbnail" src="@/assets/doge-site.png"/>
         </div>
         <div>
-          <h2>O'Reilly Auto Parts</h2>
+          <h2>Doge Coin Calculator</h2>
           <p>
-            I started at O'Reilly and was immediately tasked with establishing style standards for the Retail Point of Sale system. To do this, I developed a Style Guide application where Business Analysts, Tech Writers, and Developers can read about and interact with components. This work involves design and UI/UX Development. Within the application, users can not only view and interact with components, but search for types of components to reference.
+            Doge Coin is the meme Crypto everyone loves to joke about... so I made a little calculator to see how much your shares just might be worth. For this, I use an API that will return the current Doge price. The user inputs a number of shares and the USD value will be output on the screen.
           </p>
-          <p>
-            In addition to creating the Style Guide Application, I am actively involved in the 4 projects which comprise the POS system. I have developed the UI/UX for transitioning our systems from Java Swing to JavaFX across these projects.
-          </p>
-          <div class="project-img-wrapper">
-            <img class="project-gif" src="@/assets/sg-gif.gif" />
-            <img class="project-gif" src="@/assets/pos-gif.gif" />
-          </div>
           <br/>
           <br />
-          <p class="skills-used">Java, JavaFX, SCSS, Git, Adobe XD</p>
+          <p class="skills-used">Vue.js, Rest API, Git</p>
         </div>
 
           <div class="work-sample">
@@ -47,53 +40,23 @@
 
           <div class="work-sample">
             <a href="https://bnbcleaningco.com">
-              <img class="work-thumbnail" src="@/assets/bnb.png"/>
+              <img class="work-thumbnail" src="@/assets/memory-game.png"/>
             </a>
           </div>
           <div>
-            <h2>B&B Cleaning Co.</h2>
+            <h2>30Rock Themed Games</h2>
             <p>
-              This client came to me needing an online presence for a fast growing cleaning business. We needed to ensure the site could be easily accessed on desktop and mobile devices, that the site came up on page one of Google search and to make upkeep easy for non-technical team members after the site had launched.
+              I may have gotten a little carried away here, but it's done now, so just enjoy. I created several games for practice purposes but themed them all in 30Rock characters.
             </p>
             <p>
-              I utilized Wordpress CMS to for this site to provide easy upkeep and editing for the client. Using Wordpress also allowed me to add custom design and produce the end product quickly and efficiently. Please click on the image to view the live website.
-            </p>
-            <br />
-            <p class="skills-used">Skills Used: Wordpress CMS, CSS</p>
-          </div>
+              <a href="https://pamelamontanez.com/memory/" target="_blank">Memory Game</a><br>
+              <a href="https://kenneth.pamelamontanez.com/" target="_blank">Snake</a><br>
+              <a href="http://frank.pamelamontanez.com/" target="_blank">Whack-a-Mole</a><br>
+              <a href="https://pamelamontanez.com/connectfour/" target="_blank">Connect Four</a>
 
-          <div class="work-sample">
-            <a href="https://parkboard.org">
-              <img class="work-thumbnail" src="@/assets/parkboard.png"/>
-            </a>
-          </div>
-          <div>
-            <h2>Springfield-Greene County Park Board</h2>
-            <p>
-              I joined the Park Board team just as they decided to leave the City of Springfield website and begin a new chapter as a stand alone brand. The other members of the communications team had already selected to use the Civic Plus CMS before I came on board, so my time with Parks was spend developing this product.
-            </p>
-            <p>
-              A new feature for this project was to transition the Park Board from using a call in tour service to using the website as the basis for tours at the Springfield Botanical Center. This included mapping gardens with QR Codes and linking to custom garden pages which housed pertinent information like maps, history, and photos.
             </p>
             <br />
-            <p class="skills-used">Skills Used: CivicPlus CMS, Javascript, HTML, CSS, Flexbox, Grid</p>
-          </div>
-
-          <div class="work-sample">
-            <a href="https://parkboardgolf.org">
-              <img class="work-thumbnail" src="@/assets/parkboardgolf.png"/>
-            </a>
-          </div>
-          <div>
-            <h2>Park Board Golf</h2>
-            <p>
-              One of the projects that came across my desk during my time at the Park Board was moving the municiple golf courses to their own website.
-            </p>
-            <p>
-              For this project, I utilized Wordpress as it easily integrated into the current tee time scheduling software we decided to use.
-            </p>
-            <br />
-            <p class="skills-used">Skills Used: Wordpress CMS, CSS</p>
+            <p class="skills-used">Skills Used: Javascript, HTML, CSS, AdobeXD, Git</p>
           </div>
 
           <div class="work-sample">
