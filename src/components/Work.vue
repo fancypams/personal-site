@@ -1,7 +1,7 @@
 <template>
     <div class="work-content">
       <h1 class="page-title">Recent Work</h1>
-      <h2 class="page-subtitle">Here are a few personal projects I've worked on lately.</h2>
+      <h2 class="page-subtitle">Here are a few personal development projects I've worked on lately.</h2>
 
       <div class="work-grid">
         <div class="work-sample">

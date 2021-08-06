@@ -2,7 +2,7 @@
   <div class="hello">
     <div id="welcome-content" class="welcome-content">
         <h1 class="main-heading">Welcome</h1>
-        <h2 class="transition">I am a Front End Developer focusing on human driven solutions.</h2>
+        <h2 class="transition">I am a Front End Developer and UI/UX Designer focusing on human driven solutions.</h2>
     </div>
 
     <div id="welcome-about-me" class="welcome-about-me">
@@ -12,9 +12,16 @@
       <div class="text-block">
         <h2 class="photo-title">Hi! I'm Pam.</h2>
         <h2>About Me</h2>
-        <p>
+        <p class="about-desc">
           My goals are relatively simple: do exceptional work and do it in web.
-          I am a resourceful student of web design and development and I excel at working with people and delivering results.
+          To accomplish these goals, I have become a resourceful student of web design and development.          
+        </p>
+        <p class="about-desc">
+          I have 5+ years of experience in website design (both ui and ux) and 3+ years of experience in front-end development.
+        </p>
+        <p class="about-desc">
+          I have learned that by prioritizing business needs and taking the time to discover user tendancy, I can turn complex problems and into intuitive solutions.
+          This also means I've become an excellent communicator and can deliver on the goals I set.
         </p>
       </div>
     </div>
