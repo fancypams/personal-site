@@ -19,6 +19,7 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;  
+  overflow: hidden;
 }
 
 .content {
@@ -66,9 +67,9 @@ a {
     color: $white;
     font-weight: bold;
     font-size: 12px;
-    :hover, :active {
-      background-color: $yellow; 
-    }
+  }
+  a:hover {
+    background-color: $yellow; 
   }
 }
 
@@ -141,7 +142,7 @@ a {
   background-color: $black;
   text-align: center;
   width: 50%;
-  height: 450px;
+  min-height: 450px;
   img {
     padding: 25px 15px 5px 15px;
     margin-top: -25px;
@@ -610,4 +611,13 @@ form {
       margin-left: -5px; 
     } 
   } 
+}
+
+@media only screen and (max-width: 450px) {
+  .about-desc {
+    padding: 15px;
+    margin-left: -150px;
+    background-color: white;
+    border: 5px $black solid;
+  }
 }

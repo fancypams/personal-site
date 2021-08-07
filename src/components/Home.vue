@@ -20,8 +20,7 @@
           I have 5+ years of experience in website design (both ui and ux) and 3+ years of experience in front-end development.
         </p>
         <p class="about-desc">
-          I have learned that by prioritizing business needs and taking the time to discover user tendancy, I can turn complex problems and into intuitive solutions.
-          This also means I've become an excellent communicator and can deliver on the goals I set.
+          I have learned that by prioritizing business needs and taking the time to discover user tendancy, I can turn complex problems into intuitive solutions.
         </p>
       </div>
     </div>
