@@ -115,7 +115,7 @@ a {
     -webkit-animation: rotateY 1s linear;
     animation: rotateY 1s linear;
     animation-name: easier;
-    animation-duration: 1s; 
+    animation-duration: .85s; 
   }
 }
 
@@ -123,7 +123,7 @@ a {
   -webkit-animation: rotateY 1s linear;
   animation: rotateY 1s linear;
   animation-name: easy;
-  animation-duration: 1.5s; 
+  animation-duration: 1s; 
 }
 
 .welcome-about-me {
@@ -183,7 +183,7 @@ a {
     -webkit-animation: rotateY 1s linear;
     animation: rotateY 1s linear;
     animation-name: easier-light;
-    animation-duration: 2s;
+    animation-duration: .75s;
     color: $yellow;
     font-size: 4em;
     line-height: 4px;
@@ -195,7 +195,6 @@ a {
   display: table-cell;
   vertical-align: bottom;
   text-align: left;
-  height: 650px;
   width: 50%;
   padding: 25px; 
   .photo-title {
@@ -361,6 +360,7 @@ form {
 .case-study-grid {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 60px;
 }
 
@@ -457,7 +457,7 @@ form {
 @keyframes easy {
   0% {
     opacity: 0;
-    margin-right: 300px; }
+    margin-right: 50px; }
   100% {
     opacity: 1;
     margin-right: 0; } 
@@ -484,16 +484,16 @@ form {
 @keyframes easier {
   0% {
     opacity: 0;
-    margin-left: 300px; }
+    margin-left: 50px; }
   100% {
     opacity: 1;
-    margin-left: 0; } 
+    margin-left: 0px; } 
 }
 
 @keyframes easier-light {
   0% {
     opacity: 0;
-    margin-left: 0px; }
+    margin-left: -75px; }
   100% {
     opacity: 1;
     margin-left: -115px; } 
@@ -619,5 +619,30 @@ form {
     margin-left: -150px;
     background-color: white;
     border: 5px $black solid;
+  }
+  .mobile-menu {
+    position: fixed;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #f2b72c;
+  }
+  .mobile-nav {
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+    padding: 10px;
+    justify-content: flex-end;
+    background-color: $black;
+    margin-top: 34px;
+    a {
+      color: $white;
+      width: 150px;
+      text-decoration: none;
+      text-align: right;
+      font-size: 15px;
+      padding: 10px;
+    }
   }
 }
