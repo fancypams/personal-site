@@ -10,7 +10,7 @@
       <router-link to="/case-studies/ritter-springs-webpage">Ritter Springs</router-link>
       <router-link to="/case-studies/sgf-wit-website">SGF WIT</router-link>
     </div>
-    <router-link to="/contact">Contact</router-link>
+    <!-- <router-link to="/contact">Contact</router-link> -->
   </div>
   <div v-show="this.windowWidth <= 480" class="main-nav">
     <span class="mobile-web-id"><a href="/">pamelamontanez.com</a></span>
@@ -22,13 +22,12 @@
     <router-link to="/resume" @click="openMenu = false">Resume</router-link>
     <router-link to="/projects" @click="openMenu = false">Projects</router-link>
     <router-link to="/case-studies" @click="openMenu = false">Case Studies</router-link>
-    <router-link to="/contact" @click="openMenu = false">Contact</router-link>
+    <!-- <router-link to="/contact" @click="openMenu = false">Contact</router-link> -->
   </div>
   <router-view />
-  <div class="content"></div>
   <div class="footer">
     <p class="footer-text">
-      Copyright 2019 Pamela Montanez
+      &copy; {{ new Date().getFullYear() }} Pamela Montanez
     </p>
   </div>
 </div>

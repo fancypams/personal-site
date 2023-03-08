@@ -11,7 +11,7 @@ html, body {
   background-color: $white;
   font-family: "Roboto", sans-serif;
   color: $black;
-  margin: 0;
+  margin: auto;
   padding: 0; 
 }
 
@@ -36,6 +36,10 @@ h1 {
   
 h2 {
     font-style: italic; 
+}
+
+p {
+  font-size: 14px;
 }
   
 a {
@@ -96,27 +100,9 @@ a {
   }
 
 }
-
-.welcome-content {
-  height: 400px;
-  width: 100vw;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  background-image: url("assets/fun-pattern.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: -32px; 
-  .main-heading {
-    font-size: 5em;
-    line-height: 12px;
-    -webkit-animation: rotateY 1s linear;
-    animation: rotateY 1s linear;
-    animation-name: easier;
-    animation-duration: .85s; 
-  }
+.hello {
+  display: flex;
+  flex-direction: column;
 }
 
 .transition {
@@ -126,29 +112,14 @@ a {
   animation-duration: 1s; 
 }
 
-.welcome-about-me {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  width: 100%;
-}
-
-.about-desc {
-  max-width: 650px;
-}
-
 .color-block {
-  background-color: $black;
   text-align: center;
-  width: 50%;
-  min-height: 450px;
   img {
     padding: 25px 15px 5px 15px;
     margin-top: -25px;
-    width: 50%;
+    width: 20%;
     border: $yellow solid 5px;
-    border-radius: 250px;
+    border-radius: 50%;
     animation-name: colorpulse;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -170,27 +141,6 @@ a {
   }
 }
 
-.text-block {
-  display: table-cell;
-  animation-name: fade;
-  animation-duration: 1s;
-  vertical-align: bottom;
-  text-align: left;
-  width: 50%;
-  padding: 25px; 
-  .photo-title {
-    z-index: 1;
-    -webkit-animation: rotateY 1s linear;
-    animation: rotateY 1s linear;
-    animation-name: easier-light;
-    animation-duration: .75s;
-    color: $yellow;
-    font-size: 4em;
-    line-height: 4px;
-    margin-left: -115px; 
-  }
-}
-
 .text-block-contact {
   display: table-cell;
   vertical-align: bottom;
@@ -205,7 +155,7 @@ a {
   }
 }
 
-.resume-content, .work-content {
+.resume-content {
   text-align: center; 
   max-width: 1000px;
   margin: auto;
@@ -218,15 +168,6 @@ a {
 }
 .education { 
   flex-grow: 1; 
-}
-
-.sect-title {
-  background-color: $yellow;
-  color: $white;
-  max-width: 400px;
-  text-align: left;
-  margin-left: 20px;
-  padding: 0 10px 0 10px; 
 }
 
 .employer {
@@ -327,25 +268,6 @@ form {
   }
 }
 
-.work-grid {
-  display: grid;
-  text-align: left;
-  grid-template-columns: 20% 80%;
-  align-items: center;
-  margin: 20px;
-  justify-content: center;
-  grid-gap: 40px;
-}
-
-.work-thumbnail {
-  max-width: 200px;
-  border-radius: 50%;
-  border: $lt-gray solid 3px; 
-  :hover {
-    opacity: 50%; 
-  }
-}
-
 .skill-wrap {
   display: flex;
   flex-direction: row;
@@ -353,7 +275,7 @@ form {
   justify-content: flex-start;
   margin: 0px 0 10px 0;
   .skill-item {
-    padding: 10px 25px 10px 25px;
+    padding: 10px 0 10px 25px;
   }
 }
 
@@ -381,14 +303,11 @@ form {
   }
 }
 
-.skills-used {
-  font-style: italic;
-  font-size: 11px;
-  margin-top: -15px; 
-}
-
 .page-title {
-  text-align: center;
+  text-align: left;
+  border-left: 5px $black solid;
+  padding-left: 5px;
+  font-size: 34px;
 }
 
 .page-subtitle {
@@ -409,20 +328,6 @@ form {
 .footer-text {
   text-align: center;
   font-size: 12px; 
-}
-
-.project-img-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  img {
-    padding-bottom: 10px;
-  }
-}
-
-.project-gif {
-  max-width: 300px;
-  margin-right: 15px; 
 }
 
 .case-study-wrapper {
@@ -507,18 +412,6 @@ form {
 }
 
 @media only screen and (max-width: 800px) {
-  .work-grid {
-    grid-template-columns: 100%;
-    text-align: center; 
-  }
-
-  .project-gif {
-    width: 100%;
-    align-self: center;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px; 
-  }
 
   .resume-content {
     text-align: left;
@@ -563,7 +456,7 @@ form {
 
   .color-block img {
     margin-top: 50px;
-    width: 90%; 
+    width: 50%; 
   }
 
   .text-block-contact {
@@ -582,15 +475,6 @@ form {
 
   .job-title, .employer {
     line-height: 20px; 
-  }
-
-  .project-img-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%; 
   }
 
   .sections {
@@ -614,11 +498,9 @@ form {
 }
 
 @media only screen and (max-width: 450px) {
-  .about-desc {
-    padding: 15px;
-    margin-left: -150px;
-    background-color: white;
-    border: 5px $black solid;
+  .text-block {
+    flex-direction: column;
+    gap: 5px;
   }
   .mobile-menu {
     position: fixed;

@@ -1,28 +1,26 @@
 <template>
   <div class="hello">
     <div id="welcome-content" class="welcome-content">
-        <h1 class="main-heading">Welcome</h1>
-        <h2 class="transition">I am a Front End Developer and UI/UX Designer focusing on human driven solutions.</h2>
-    </div>
-
-    <div id="welcome-about-me" class="welcome-about-me">
-      <div class="color-block">
-        <img src="../assets/me-round.png" />
-      </div>
-      <div class="text-block">
-        <h2 class="photo-title">Hi! I'm Pam.</h2>
-        <h2>About Me</h2>
-        <p class="about-desc">
-          My goals are relatively simple: do exceptional work and do it in web.
-          To accomplish these goals, I have become a resourceful student of web design and development.          
-        </p>
-        <p class="about-desc">
-          I have 5+ years of experience in website design (both ui and ux) and 3+ years of experience in front-end development.
-        </p>
-        <p class="about-desc">
-          I have learned that by prioritizing business needs and taking the time to discover user tendancy, I can turn complex problems into intuitive solutions.
-        </p>
-      </div>
+        <div class="color-block">
+          <img src="../assets/me-round.png" />
+        </div>
+        <div>
+            <h1 class="main-heading">Hi! I'm Pam.</h1>
+            <h2 class="transition">Front End Engineer with an emphasis in UX</h2>
+          </div>
+        <div class="text-block">
+          <div id="welcome-about-me" class="welcome-about-me">
+              <p class="about-desc">
+                My goals are simple: <i>do good work and do it on the web</i>.         
+              </p>
+              <p class="about-desc">
+                To accomplish these goals, I have become a resourceful web developer with an emphasis in user driven design.          
+                I have 7+ years of experience in website design (both ui and ux) and 4+ years of experience in front-end development.
+                I have learned that by taking the time to discover a user's tendancy and comparing this with business priorities, I can turn complex problems into intuitive solutions.
+              </p>
+          </div>
+        </div>
+        
     </div>
   </div>
 </template>
@@ -37,5 +35,64 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/styles/styles.scss';
+
+.welcome-content {
+  // height: 400px;
+  padding: 40px 0;
+  width: 100vw;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background-image: url("../assets/fun-pattern.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // margin-top: -32px; 
+  .main-heading {
+    font-size: 5em;
+    line-height: 12px;
+    -webkit-animation: rotateY 1s linear;
+    animation: rotateY 1s linear;
+    animation-name: easier;
+    animation-duration: .85s; 
+  }
+}
+.text-block {
+  display: flex;
+  gap: 10px;
+  animation-name: fade;
+  animation-duration: 1s;
+  padding: 25px; 
+  align-items: center;
+  justify-content: center;
+  .photo-title {
+    z-index: 1;
+    -webkit-animation: rotateY 1s linear;
+    animation: rotateY 1s linear;
+    animation-name: easier-light;
+    animation-duration: .75s;
+    color: $yellow;
+    font-size: 4em;
+    line-height: 4px;
+    margin-left: -115px; 
+  }
+  .welcome-about-me {
+    //background-color: $white;
+    //width: 100%;
+    max-width: 437px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    border-left: 5px $black solid;
+    .about-desc {
+      padding: 5px 5px 5px 20px;
+      font-size: 14px;
+      margin: 0;
+    }
+}
+}
 
 </style>

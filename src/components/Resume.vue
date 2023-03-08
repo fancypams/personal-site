@@ -1,8 +1,7 @@
 <template>
     <div class="resume-content">
-      <h1 class="resume-name">Pamela Montanez</h1>
-      <h2 class="resume-goal">My goals are relatively simple: do exceptional work and do it in web. I am a resourceful student of web design
-      and development and I excel at working with people and delivering results.</h2>
+      <h1 class="page-title resume-name">Pamela Montanez</h1>
+      <!-- <h2 class="resume-goal">I am a resourceful web developer who excels at working with people and delivering results.</h2> -->
 
     <section>
       <div class="sect-title">
@@ -61,8 +60,9 @@ export default {
     data() {
         return {
             jobs: [
-                {title:'UI/UX Developer II', employer:"O'Reilly Auto Parts", date:'June 2020 - present', description:'Front end development for the O’Reilly online store using Vue.js, LESS, Thymeleaf, HTML, CSS, and JavaScript; Active involvement in ADA compliance task force for online store; Work with solution design team on new user experience driven features and improvements' },
-                {title:'UI/UX Developer II', employer:"O'Reilly Auto Parts", date:'Dec. 2018 - June 2020', description:'Design and develop solutions for point of sale team members using Java, JavaFX, and SASS; Determine and implement style standards across all Retail projects; Develop style guide application for interactive use of style standards' },
+                {title:'UX Engineer', employer:"WaFd Bank", date:'January 2022 - present', description:'Identify and solution user pain points in the online banking application; Design and implement UI/UX prototypes into the application using Figma, Mendix, HTML, JavaScript, and Sass; Maintain brand design system consistency; Conduct user research and generate feature improvements based upon user feedback' },
+                {title:'UI/UX Developer II', employer:"O'Reilly Auto Parts", date:'Dec. 2018 - Dec. 2021', description:'Front end development for the O’Reilly online store using Vue.js, LESS, Thymeleaf, HTML, CSS, and JavaScript; Work with solution design team on new user experience driven features and improvements; Design and develop solutions for point of sale team members using Java, JavaFX, and SASS; Develop style guide application for interactive use of style standards' },
+                // {title:'UI/UX Developer II', employer:"O'Reilly Auto Parts", date:'Dec. 2018 - June 2020', description:'' },
                 {title:'Web Designer', employer:'Springfield-Greene County Park Board', date:'June 2016 - March 2019', description:'Design, produce, and maintain web pages and web applications with HTML, CSS, JavaScript, SharePoint and various CMS; Create graphics for site and e-newsletter for email distribution; Monitor, analyze, and report web traffic and utilization via Google Analytics; Youtube Bumper Ads and Google AdSense' },
                 {title:'Marketing Manager', employer:'The Lamp Stand', date:'July 2015 - June 2016', description:'Amazon store implementation and maintenance; Manage site-wide promotions and pricing; Website content maintenance; Social Media content and graphics; Email newsletter; Research and development of new avenues for retail sales; Team management; Product Photography' },
                 {title:'Marketing Coordinator', employer:'Meyer ASG', date:'Sept. 2014 - July 2015', description:'Social media content; Website design and maintenance in CMS using HTML, CSS; Graphic design and marketing content creation; Blogging; Product photography; Email newsletter; Social Media' }
@@ -74,17 +74,21 @@ export default {
             skills: [ 
                 'HTML', 
                 'CSS', 
-                'Sass', 
-                'Vue.js',
-                'FXML', 
-                'JavaScript', 
+                'Sass',
+                'JavaScript',
+                'Vue.js', 
                 'Java',
-                'JavaFX', 
+                'JavaFX',
+                'FXML',  
+                'Mendix', 
                 'VSCode',
                 'IntelliJ IDEA', 
                 'Git', 
                 'Photoshop',
-                'XD'
+                'XD',
+                'Figma',
+                'Google Tag Manager',
+                'Tealium'
             ]
         }
     },
@@ -96,3 +100,18 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+@import '@/styles/styles.scss';
+.resume-name {
+  padding-left: 20px;
+}
+.sect-title {
+  background-color: $yellow;
+  color: $white;
+  max-width: 400px;
+  text-align: left;
+  // margin-left: 20px;
+  padding: 0 10px 0 10px; 
+}
+</style>
