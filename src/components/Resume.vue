@@ -103,6 +103,12 @@ export default {
 
 <style lang="scss">
 @import '@/styles/styles.scss';
+
+.resume-content {
+  text-align: center; 
+  max-width: 1000px;
+  margin: auto;
+}
 .resume-name {
   padding-left: 20px;
 }
@@ -113,5 +119,17 @@ export default {
   text-align: left;
   // margin-left: 20px;
   padding: 0 10px 0 10px; 
+}
+@media only screen and (max-width: 800px) {
+  .resume-content {
+    margin: auto 25px;
+  }
+  .resume-name {
+    padding-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  
 }
 </style>

@@ -158,6 +158,10 @@
     text-align: center; 
   }
 
+  .work-content {
+    margin: auto 25px;
+  }
+
   .project-gif {
     width: 100%;
     align-self: center;
