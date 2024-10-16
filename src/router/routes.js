@@ -7,6 +7,8 @@ import Contact from "@/components/Contact.vue";
 import SGFBot from "@/components/case-studies/SGFBot.vue";
 import RitterSprings from "@/components/case-studies/RitterSprings.vue";
 import WIT from "@/components/case-studies/WIT.vue";
+import BillPay from "@/components/case-studies/BillPay.vue";
+import Menu from "@/components/case-studies/Menu.vue";
 
 const routes = [
   {
@@ -48,6 +50,16 @@ const routes = [
     path: "/case-studies/sgf-wit-website",
     name: "SGF WIT",
     component: WIT,
+  },
+  {
+    path: "/case-studies/menu",
+    name: "Menu",
+    component: Menu,
+  },
+  {
+    path: "/case-studies/bill-pay",
+    name: "Bill Pay",
+    component: BillPay,
   },
 ];
 

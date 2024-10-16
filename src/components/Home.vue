@@ -6,17 +6,16 @@
         </div>
         <div>
             <h1 class="main-heading">Hi! I'm Pam.</h1>
-            <h2 class="transition">Front End Engineer with an emphasis in UX</h2>
+            <h2 class="transition sub-heading">Senior UX Engineer transitioning into Product Management</h2>
           </div>
         <div class="text-block">
           <div id="welcome-about-me" class="welcome-about-me">
               <p class="about-desc">
-                My goals are simple: <i>do good work and do it on the web</i>.         
+                My goals are simple: <i>share the vision and do good work</i>.         
               </p>
               <p class="about-desc">
-                To accomplish these goals, I have become a resourceful web developer with an emphasis in user driven design.          
-                I have 7+ years of experience in website design (both ui and ux) and 4+ years of experience in front-end development.
-                I have learned that by taking the time to discover a user's tendancy and comparing this with business priorities, I can turn complex problems into intuitive solutions.
+                My experience in website design, front-end development, and user analytics has made me uniquely qualified to translate complex user needs into actionable product strategies.
+                I have learned that by taking the time to discover a user's tendancy and comparing this with business priorities, I can turn application roadblocks into intuitive solutions.
               </p>
           </div>
         </div>
@@ -93,6 +92,16 @@ export default {
       margin: 0;
     }
 }
+}
+
+@media only screen and (max-width: 800px) {
+  .sub-heading {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  
 }
 
 </style>
