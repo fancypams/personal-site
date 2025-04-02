@@ -3,30 +3,39 @@
       <h1 class="page-title">Pay Bills API Experience</h1>
 
       <div class="case-study-wrapper">
-        <img class="case-study-img" src="@/assets/sgf-bot-desktop-mobile-mock.png" />
+        <img class="case-study-img" src="@/assets/browser-comp-2.png" />
         <div>
           <h2>Context</h2>
           <p>
-            The Springfield Botanical Center (SGF Bot) is an internationally accredited garden park and event facility that attracts visitors from around the world.
+            A regional bank utilizes a third party iframe experience for their bill payment system. The business would like to customize this experience to better fit the design system of the bank and make features more easily accessible.
           </p>
         </div>
         <div>
           <h2>Problem</h2>
           <div class="img-wrapper">
-            <img class="case-study-img keep-small" src="@/assets/sgf-bot-phone-to-web.png" />
+            <img class="case-study-img keep-small" src="@/assets/iframe-to-api.png" />
           </div>
           <p>
-            SGF Bot provides a self guided audio tour to visitors, however the previous system required patrons to dial a phone number and stay
-            on their phones on a particular track around the gardens. The goal here was to provide a new way to offer a tour to visitors that would allow them to dictate their own path but gain easy access to all the information about each portion of the gardens.
+            The current iframe experience is not designed to be a responsive experience which forces users to primarily use their desktop to use this feature. Analytics show that for this bank, over 25% of users are accessing this feature via mobile web browser. It comes as no surprise that in turn, a high volume of customer service calls are in regards to users being unable to access the proper tools on their phone to complete basic bill payments.
           </p>
           <p>
-            This UX begins physically in the gardens and translates digitally into a web experience. I worked with the SGF Bot Board to create a virtual experience that could be accessed throughout the park.
+            Additionally the current iframe experience is not fully ADA accessible. This will require font size increases, contrast enhancements, implementing proper tab order and tagging, as well as implementing a solid document structure.
+          </p>
+          <p>
+            Finally, using the third party iframe experience impedes the ability to fail gracefully. If there is a delay or outage, the bank is left to display what they get instead of guiding the user through possible resolution steps or giving any kind of explanation for the issue.
+          </p>
+          <p>
+            These may seem like basic problems to solve, but for a regional bank they are essential. If they can get users to successfully use their product offerings, those users are more likely to utilize accounts and deposit additional money.
           </p>
         </div>
         <div>
           <h2>Journey</h2>
           <p>
-            To accomplish our goal of a fluid tour experience, we did not want to provide our visitors with any specific path they needed to follow to be able to be assisted in their tour. This means that whenever a visitor finds signage in the park, the QR code or shortended web link on that sign would direct them to all the information they may need. The QR code or shortened web link takes the visitor to a dedicated webpage which includes a map, an audio clip of the history and contents of the garden, a transcript (in the case the visitor did not want to listen), as well as photos of the gardens at different seasons of the year.
+            This project was more than a simple UI enhancement. 
+          </p>
+          <p>
+            First I started with discussing the above requirements with the stakeholders then I spoke with our backend development team about what we needed in regards to the apis.
+            I then got started on a detailed prototype in Figma. I worked with the UX Manager to ensure this design fell in line with the brand design system. Once the general design and flow was approved I then gave a prototype demo to stakeholders and development teams. Finally we had a plan.
           </p>
           <img class="case-study-img" src="@/assets/sgf-bot-user-flow-chart.png" />
           <p>

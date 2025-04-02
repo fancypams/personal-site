@@ -1,26 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Rozha+One&display=swap');
+
 $yellow: #f2b72c;
 $lt-yellow: #f7e9c6;
 $blue: #79e0e0;
 $white: #ffffff;
 $black: #000000;
-$gray: #8a8a8a;
+$gray: #6D6D6D;
+$gray-md: #D5D5D5;
 $lt-gray: #efefef;
+$green: #CED0BD;
+$brown: #A46B49;
+$pink: #AC7E62;
 
 html, body {
   height: 100%;
   background-color: $white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Old Standard TT", serif;
   color: $black;
   margin: auto;
   padding: 0; 
 }
 
-#app {
-  display: flex;
-  flex-direction: column;
-  height: 100%;  
-  overflow-x: hidden;
-}
+
 
 .content {
   flex: 1 0 auto;
@@ -41,18 +42,19 @@ h2 {
 p {
   font-size: 14px;
 }
-  
+
 a {
+  color: $pink;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   text-decoration: underline;
-  color: $black; 
   :hover {
-    color: $yellow; 
   }
-  :visited {
-    color: $black; 
+  :visited { 
   }
   :active {
-    color: $black;
+    
   }
 }
 
@@ -309,20 +311,7 @@ form {
   margin-top: -20px;
 }
 
-.footer {
-  background-color: $gray;
-  color: $white;
-  padding: 10px;
-  width: 100vw;
-  display: table-cell;
-  vertical-align: middle; 
-  flex-shrink: 0;
-}
 
-.footer-text {
-  text-align: center;
-  font-size: 12px; 
-}
 
 .case-study-wrapper {
   text-align: left;
