@@ -1,7 +1,8 @@
 <template>
   <Navbar />
   <Masthead />
-  <Home />
+  <routerView :key="$route.components/Home"><Home /></routerView>
+  <routerView :key="$route.components/Resume"><Resume /></routerView>
   <Footer />
 </template>
 
@@ -10,6 +11,7 @@ import Navbar from './components/Navbar.vue'
 import Masthead from './components/Masthead.vue'
 import Footer from './components/Footer.vue'
 import Home from './components/Home.vue'
+import Resume from './components/Resume.vue'
 
 export default {
   name: 'App',
@@ -17,7 +19,8 @@ export default {
     Navbar,
     Masthead,
     Home,
-    Footer
+    Footer,
+    Resume
   }
 }
 </script>
@@ -44,7 +47,7 @@ a {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   #app {
     padding: 0 100px;
   }

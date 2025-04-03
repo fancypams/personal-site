@@ -96,11 +96,7 @@ export default {
 }
 
 
-@media only screen and (max-width: 800px) {
-
-}
-
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 900px) {
   .masthead-wrapper {
     flex-direction: column;
     gap: 0;
@@ -113,6 +109,10 @@ export default {
     font-size: 54px;
     line-height: 45px;;
   }
+}
+
+@media only screen and (max-width: 450px) {
+
 }
 
 </style>

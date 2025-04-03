@@ -19,7 +19,7 @@
           The elevator pitch
         </div>
         <span>
-          My experience in website design, front-end development, and user analytics has made me uniquely qualified to translate complex needs into actionable product strategies. I am a Certified Scrum Master and Technical Product Manager who cares as much about style guide standards as I do about code architecture and hitting those key preformance metrics. I am a creative thinker who genuinely enjoys figuring out the best path. And so far, I have learned that by taking the time to define business priorities and also discover user tendancy, I can turn application roadblocks into intuitive and profitable solutions.
+          My experience in website design, front-end development, and user analytics has made me uniquely qualified to translate complex needs into actionable product strategies. I am a Certified Scrum Master and Technical Product Manager who cares as much about style guide standards as I do about code architecture and hitting those key preformance metrics. I am a creative thinker who genuinely enjoys figuring out the best path forward. And so far, I have learned that by taking the time to define business priorities and also discover user tendancy, I can turn application roadblocks into intuitive and profitable solutions.
         </span>
         <br><br>
         <span>

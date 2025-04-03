@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
-    <div>Home</div>
-    <div>Resume</div>
+    <router-link to="/" @mouseover="hoverEffect">Home</router-link>
+    <router-link to="/resume">Resume</router-link>
   </div>
 </template>
 
