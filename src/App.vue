@@ -28,7 +28,7 @@ export default {
 #app {
   display: flex;
   flex-direction: column;
-  width: 1200px;
+  padding: 0 150px;
   height: 100%;
   margin: auto;
 }
@@ -42,5 +42,18 @@ export default {
 
 a {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  #app {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #app {
+    padding: 0 20px;
+  }
+  
 }
 </style>

@@ -101,7 +101,18 @@ export default {
 }
 
 @media only screen and (max-width: 450px) {
-  
+  .masthead-wrapper {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 0 15px 0;
+  }
+  .masthead-data .thin-divider{
+    order: 5;
+  }
+  .name-title {
+    font-size: 54px;
+    line-height: 45px;;
+  }
 }
 
 </style>

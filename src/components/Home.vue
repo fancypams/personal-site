@@ -165,6 +165,28 @@ export default {
 }
 
 @media only screen and (max-width: 800px) {
+  .body-left {
+    flex-direction: column;
+  }
+  .article-img {
+    width: 100%;
+  }
+  .article-body {
+    width: 100%;
+  }
+  .article-preview {
+    flex-direction: column;
+  }
+  .article-body-three-columns {
+    flex-direction: column;
+    span {
+      width: 100%;
+    }
+  }
+  .article-links {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
 
 }
 
