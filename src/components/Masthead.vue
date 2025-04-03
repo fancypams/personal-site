@@ -20,20 +20,6 @@
       Montanez
     </div>
   </div>
-  <div class="article-preview">
-    <div>
-      PM saves business $40k/mo. with one code change
-      <a>Read More</a>
-    </div>
-    <div>
-      Digital Account Opening gets major overhaul; Data proves success
-      <a>Read More</a>
-    </div>
-    <div class="quote">
-      Whatever you are, try to be a good one.
-      <span class="quote-author">William Makepeace Thackeray</span>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -62,8 +48,8 @@ export default {
 .masthead-wrapper {
   display: flex;
   gap: 40px;
-  width: 900px;
   padding: 15px 0;
+  border-bottom: solid 1px $black;
 }
 .masthead-data {
   display: flex;
@@ -97,27 +83,6 @@ export default {
   font-family: 'Rozha One', serif;
   text-transform: uppercase;
   line-height: 70px;
-}
-.article-preview {
-  border-top: solid 1px $black;
-  border-bottom: double 3px $black;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  width: 100%;
-  padding: 15px 0;
-  font-weight: bold;
-  justify-content: center;
-  font-size: 18px;
-  div:not(:first-child) {
-    border-left: solid 1px $black;
-    padding-left: 15px;
-  }
-}
-.quote-author {
-  font-weight: 400;
-  font-style: italic;
-  display: inline-block;
 }
 .thick-divider {
   border-bottom: solid 4px $black;

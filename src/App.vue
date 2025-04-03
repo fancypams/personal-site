@@ -1,10 +1,12 @@
 <template>
+  <Navbar />
   <Masthead />
   <Home />
   <Footer />
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue'
 import Masthead from './components/Masthead.vue'
 import Footer from './components/Footer.vue'
 import Home from './components/Home.vue'
@@ -12,9 +14,10 @@ import Home from './components/Home.vue'
 export default {
   name: 'App',
   components: {
+    Navbar,
     Masthead,
-    Footer,
-    Home
+    Home,
+    Footer
   }
 }
 </script>

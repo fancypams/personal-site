@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Rozha+One&display=swap');
 
 $yellow: #f2b72c;
+$cream: #F1EFED;
 $lt-yellow: #f7e9c6;
 $blue: #79e0e0;
 $white: #ffffff;
@@ -11,10 +12,11 @@ $lt-gray: #efefef;
 $green: #CED0BD;
 $brown: #A46B49;
 $pink: #AC7E62;
+$red: #C00000;
 
 html, body {
   height: 100%;
-  background-color: $white;
+  background-color: $cream;
   font-family: "Old Standard TT", serif;
   color: $black;
   margin: auto;
@@ -44,11 +46,12 @@ p {
 }
 
 a {
-  color: $pink;
+  color: $red;
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
   text-decoration: underline;
+  text-transform: uppercase;
   :hover {
   }
   :visited { 
