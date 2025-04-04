@@ -57,7 +57,7 @@ export default {
   gap: 5px;
 }
 .date {
-  font-family: 'Inter', sans-serif;
+  font-family: $sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: $gray;
@@ -80,9 +80,10 @@ export default {
 }
 .name-title {
   font-size: 110px;
-  font-family: 'Rozha One', serif;
+  font-family: $heading;
   text-transform: uppercase;
   line-height: 70px;
+  font-weight: 100;
 }
 .thick-divider {
   border-bottom: solid 4px $black;

@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
-    <router-link to="/" @mouseover="hoverEffect">Home</router-link>
-    <router-link to="/resume">Resume</router-link>
+    <router-link :to="{ name: 'Home' }">Home</router-link>
+    <router-link :to="{ name: 'Resume'}">Resume</router-link>
   </div>
 </template>
 
@@ -31,6 +31,14 @@ export default {
   width: 100%;
   justify-content: flex-end;
   font-size: 14px;
+  a {
+    font-family: $serif !important;
+    text-decoration: none;
+    font-size: 14px;
+    color: $black;
+    text-transform: capitalize;
+    font-weight: 100;
+  }
 }
 
 @media only screen and (max-width: 800px) {

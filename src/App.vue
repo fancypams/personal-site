@@ -1,26 +1,18 @@
 <template>
   <Navbar />
-  <Masthead />
-  <routerView :key="$route.components/Home"><Home /></routerView>
-  <routerView :key="$route.components/Resume"><Resume /></routerView>
+  <router-view></router-view>
   <Footer />
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
-import Masthead from './components/Masthead.vue'
 import Footer from './components/Footer.vue'
-import Home from './components/Home.vue'
-import Resume from './components/Resume.vue'
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    Masthead,
-    Home,
-    Footer,
-    Resume
+    Footer
   }
 }
 </script>

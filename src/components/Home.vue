@@ -1,4 +1,5 @@
 <template>
+  <Masthead/>
   <div class="body-wrapper">
 
     <div class="body-left">
@@ -19,11 +20,19 @@
           The elevator pitch
         </div>
         <span>
-          My experience in website design, front-end development, and user analytics has made me uniquely qualified to translate complex needs into actionable product strategies. I am a Certified Scrum Master and Technical Product Manager who cares as much about style guide standards as I do about code architecture and hitting those key preformance metrics. I am a creative thinker who genuinely enjoys figuring out the best path forward. And so far, I have learned that by taking the time to define business priorities and also discover user tendancy, I can turn application roadblocks into intuitive and profitable solutions.
+          My experience in website design, front-end development, and user analytics has made me 
+          uniquely qualified to translate complex needs into actionable product strategies. I am a 
+          Certified Scrum Master and Technical Product Manager who cares as much about style guide 
+          standards as I do about code architecture and hitting those key preformance metrics. I am 
+          a creative thinker who genuinely enjoys figuring out the best path forward. And so far, 
+          I have learned that by taking the time to define business priorities and also discover user 
+          tendancy, I can turn application roadblocks into intuitive and profitable solutions.
         </span>
         <br><br>
         <span>
-          This website is meant to demonstrate my career headlines in a fun way (nod to the classic newspaper). I am fortunate to have worked on some projects that I am really proud to share. Please take a look around and get to know my work a little more.
+          This website is meant to demonstrate my career headlines in a fun way (nod to the classic 
+          newspaper). I am fortunate to have worked on some projects that I am really proud to share. 
+          Please take a look around and get to know my work a little more.
         </span>
       </div>
 
@@ -33,7 +42,7 @@
   <div class="article-preview">
     <div>
       Product Manager with over a decade of experience turning complex problems into actionable product solutions
-      <a>View Full Resume</a>
+      <router-link :to="{ name: 'Resume'}">View Full Resume</router-link>
     </div>
     <div class="quote">
       Whatever you are, try to be a good one.
@@ -43,17 +52,23 @@
 
   <div class="article">
     <div class="article-title extra-top-padding">
-      Woman spends too long developing coding skills solely for professional use and decides to make project just for fun
+      Woman creates custom CMS as monthly party invite; Regrets nothing
     </div>
     <div class="article-body-three-columns">
       <span>
-        Hi, I’m the woman, it’s me. I spent far too long making projects for work before finally deciding to make something that would make my life a little bit more fun. The project? A custom CMS that can quickly be updated and sent out to invite friends over for a monthly themed happy hour.
+        Hi, I’m the woman, it’s me. I spent far too long making projects for work before finally deciding 
+        to make something that would make my life a little bit more fun. The project? A custom CMS that can 
+        quickly be updated and sent out to invite friends over for a monthly themed happy hour.
       </span>
       <span>
-        I build this project using Craft CMS. Craft CMS is a a flexible, self-hosted content management system written in PHP that stores content in a database and can be extended via a plugin marketplace. It’s like Wordpress, but for me, a lot simpler to spin up the basic, yet custom site I needed.
+        I built this project using Craft CMS which is a flexible, self-hosted content management 
+        system written in PHP that stores content in a database and can be extended via a plugin marketplace. 
+        It’s like Wordpress, but for me, a lot simpler to spin up the basic, yet custom site I needed.
       </span>
       <span>
-        That’s right, I made my own “Wordpress” style site just so that I could post the latest date, time, theme, and drink recipe to a my own website... for fun! I wanted to try out Craft CMS and I regret nothing.
+        Using Craft, I can create users that can also update the site if I am not available. I made 
+        my own templated site with user login ability just so I (or a friend) could post the latest date, time, 
+        theme, and drink recipe to a website. I wanted to try out Craft CMS and I regret nothing.
       </span>
     </div>
     <div class="article-links">
@@ -64,12 +79,14 @@
 </template>
 
 <script>
+import Masthead from './Masthead.vue'
 
 export default {
   name: 'Home',
   props: {
   },
   components: {
+    Masthead
   },
   data() {
   }
@@ -86,7 +103,7 @@ export default {
   text-transform: uppercase;
   color: $red;
   font-size: 12px;
-  font-family: 'Inter', sans-serif;
+  font-family: $sans-serif;
   font-weight: 700;
   margin-bottom: 20px;
 }
