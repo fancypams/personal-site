@@ -2,6 +2,7 @@
   <div class="navbar">
     <router-link :to="{ name: 'Home' }">Home</router-link>
     <router-link :to="{ name: 'Resume'}">Resume</router-link>
+    <router-link :to="{ name: 'Bookshelf'}">Bookshelf</router-link>
   </div>
 </template>
 

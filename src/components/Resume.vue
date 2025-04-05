@@ -107,7 +107,7 @@
           As Lead UX Engineer, I had the opportunity to mentor other developers, implement large personalization 
           efforts, and create new user focused features in the Online Banking Application.
         </div>
-        <div class="blurb-text-body">
+        <!-- <div class="blurb-text-body">
           <span>
             Our new mobile app was launched just as I came on board as Product Manager. Almost as soon as the app 
             hit production, a volume overage began causing a $30-40k per month overage. Development teams were 
@@ -129,7 +129,7 @@
             clients over. My technical background paired with cross-team communication resulted in a fix that will allow 
             for a greatly improved client experience.
           </span>
-        </div>
+        </div>-->
       </div>
 
       <div class="thick-divider extra-margin-bottom"></div>
@@ -159,10 +159,11 @@
           Proud Moments at {{ jobs[2].employer }}
         </div>
         <div class="blurb-text">
-          As Lead UX Engineer, I had the opportunity to mentor other developers, implement large personalization 
-          efforts, and create new user focused features in the Online Banking Application.
+          As UI/UX Developer II, I became a style guide expert, created an interactive style guide app, 
+          owned our ADA Compliance Task Force, and worked with third parties to integrate fraud mitigation 
+          tools seemlessly into the user experience.
         </div>
-        <div class="blurb-text-body">
+        <!-- <div class="blurb-text-body">
           <span>
             Our new mobile app was launched just as I came on board as Product Manager. 
             Almost as soon as the app hit production, a volume overage began causing a $30-40k 
@@ -197,7 +198,7 @@
             lost clients over. My technical background paired with cross-team communication resulted in 
             a fix that will allow for a greatly improved client experience.
           </span>
-        </div>
+        </div>-->
       </div>
 
       <div class="thick-divider extra-margin-bottom"></div>
