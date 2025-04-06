@@ -2,7 +2,7 @@
   <div class="section-title">Books</div>
   <div class="section-subtitle">My latest reading shown utilizing the <a href="https://openlibrary.org/" target="_blank">open library</a> api</div>
   <div class="input-wrapper">
-    <input placeholder="Type to search" v-model="search" />
+    <input placeholder="Type to search by title" v-model="search" />
     <button v-if="search" @click="clearSearch" class="fa-solid fa-circle-xmark input-margin" ></button>
   </div>
   <div class="book-shelf" >
@@ -139,8 +139,10 @@ a {
   font-size: 12px;
 }
 
-@media only screen and (max-width: 800px) {
-
+@media only screen and (max-width: 975px) {
+  .book-shelf {
+    justify-content: space-around;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -157,6 +159,13 @@ a {
   }
   .book-shelf {
     justify-content: center;
+  }
+  .input-wrapper {
+    justify-content: center;
+    input {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
 </style>
