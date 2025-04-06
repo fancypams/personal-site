@@ -6,10 +6,18 @@
     <button v-if="search" @click="clearSearch" class="fa-solid fa-circle-xmark input-margin" ></button>
   </div>
   <div class="book-shelf" >
-    <div class="category" v-for="book in filteredBooks" :key="book.title">
-        <span class="book-cover"><img :src="book.cover" /></span>
+    <div class="book-details" v-for="book in filteredBooks" :key="book.title">
+        <span class="book-cover" @click="openPreview"><img :src="book.coverSm" /></span>
         <span class="book-title">{{ book.title }}</span>
         <span class="book-author">{{ book.author[0] }}</span>
+    </div>
+  </div>
+
+  <div v-if="showPreview">
+    <span class="overlay"></span>
+    <div class="book-preview">
+      <span class="book-preview-close fa-solid fa-circle-xmark" @click="closeOverlay"></span>
+      <span class="book-cover"><img :src="previewImage" /></span>
     </div>
   </div>
 </template>
@@ -24,7 +32,9 @@ export default {
   data() {
       return {
         search: '',
-        finished: []
+        finished: [],
+        showPreview: false,
+        previewImage: ''
       }
   },
   computed: {
@@ -44,7 +54,8 @@ export default {
             title: entries[i].work.title,
             author: entries[i].work.author_names,
             olid: entries[i].work.edition_key[0],
-            cover: 'https://covers.openlibrary.org/b/olid/' + entries[i].work.cover_edition_key + '-M.jpg'
+            coverSm: 'https://covers.openlibrary.org/b/olid/' + entries[i].work.cover_edition_key + '-M.jpg',
+            coverLg: 'https://covers.openlibrary.org/b/olid/' + entries[i].work.cover_edition_key + '-L.jpg'
           }
           this.finished.push(obj)
         }
@@ -53,6 +64,18 @@ export default {
   methods: {
     clearSearch() {
       this.search = '';
+    },
+    openPreview(e) {
+      let bookToPreview = e.target.src;
+      this.previewImage = bookToPreview.replace('-M', '-L'); 
+      this.showPreview = true;
+      window.setTimeout(() => {
+        document.querySelector('.overlay').addEventListener('click', this.closeOverlay);
+      }, 300)
+    },
+    closeOverlay() {
+      this.showPreview = false;
+      document.querySelector('.overlay').removeEventListener('click', this.closeOverlay);
     }
   }
 }
@@ -110,7 +133,7 @@ export default {
   width: 100%;
   flex-wrap: wrap;
   justify-content: left;
-  .category {
+  .book-details {
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -130,9 +153,40 @@ export default {
     font-size: 14px;
     margin-top: -5px;
   }
-  .book-cover img{
-    height: 175px;
-
+  .book-cover { 
+    height: 275px;
+    img {
+      height: 100%;
+    }
+    &:hover {
+      background: $black;
+      cursor: pointer;
+      img {
+        opacity: .7;
+      }
+    }
+  }
+}
+.overlay {
+  opacity: .5;
+  background-color: $black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.book-preview {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .book-preview-close {
+    z-index: 5;
+    color: $white;
+    position: fixed;
+    top: -3%;
+    left: 102%;
   }
 }
 a {

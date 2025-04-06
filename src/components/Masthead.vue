@@ -48,7 +48,7 @@ export default {
           case 'sunny':
             this.iconClass.push('fa-sun');
             break;
-          case 'cloudy':
+          case 'cloudy' || 'overcast':
             this.iconClass.push('fa-cloud');
             break;
           case 'partly cloudy':
@@ -57,7 +57,7 @@ export default {
           case 'rain':
             this.iconClass.push('fa-cloud-showers-heavy');
             break;
-          case "default":
+          case 'default':
             this.iconClass.push('fa-cloud-sun-rain');
             break;
         }
