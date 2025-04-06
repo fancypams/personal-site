@@ -1,11 +1,15 @@
 <template>
   <div class="section-title">Books</div>
-  <div class="section-subtitle">A short list of my latest mentionable reads shown utilizing the <a href="https://openlibrary.org/" target="_blank">open library</a> api</div>
-  <div class="book-shelf">
-    <div class="category" v-for="book in finished" :key="book">
-      <span class="book-cover"><img :src="book.cover" /></span>
-      <span class="book-title">{{ book.title }}</span>
-      <span class="book-author">{{ book.author[0] }}</span>
+  <div class="section-subtitle">My latest reading shown utilizing the <a href="https://openlibrary.org/" target="_blank">open library</a> api</div>
+  <div class="input-wrapper">
+    <input placeholder="Type to search" v-model="search" />
+    <button v-if="search" @click="clearSearch" class="fa-solid fa-circle-xmark input-margin" ></button>
+  </div>
+  <div class="book-shelf" >
+    <div class="category" v-for="book in filteredBooks" :key="book.title">
+        <span class="book-cover"><img :src="book.cover" /></span>
+        <span class="book-title">{{ book.title }}</span>
+        <span class="book-author">{{ book.author[0] }}</span>
     </div>
   </div>
 </template>
@@ -19,16 +23,22 @@ export default {
   },
   data() {
       return {
-        finished: [],
-        reading: [],
+        search: '',
+        finished: []
       }
+  },
+  computed: {
+    filteredBooks() {
+      return this.finished.filter(book => {
+        return book.title.toLowerCase().includes(this.search.toLowerCase());
+      });
+    }
   },
   mounted() {
     axios
       .get('https://openlibrary.org/people/pamelamontanez/books/already-read.json')
       .then(response => {
         let entries = response.data.reading_log_entries
-        console.info(response.data)
         for (let i = 0; i < entries.length; i++) {
           let obj = {
             title: entries[i].work.title,
@@ -41,7 +51,9 @@ export default {
       })
   },
   methods: {
-
+    clearSearch() {
+      this.search = '';
+    }
   }
 }
 </script>
@@ -63,6 +75,33 @@ export default {
   margin-bottom: 50px;
   margin-top: -35px;
 }
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  input {
+    height: 12px;
+    width: 250px;
+    border-radius: 15px;
+    border: 1px solid $gray-md;
+    padding: 8px 12px;
+    margin-left: -45px;
+  }
+  button {
+    background: none;
+    border: none;
+    margin-bottom: 7px;
+    margin-left: -35px;
+    &::before {
+      color: $gray;
+    }
+  }
+}
+.input-margin {
+  margin-right: 10px;
+}
 .book-shelf {
   display: flex;
   flex-flow: row;
@@ -74,15 +113,14 @@ export default {
   .category {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
   .book-title {
     font-weight: 300;
     font-family: $sans-serif;
     width: 130px;
-    height: 30px;
     text-align: center;
   }
   .book-author {
@@ -90,6 +128,7 @@ export default {
     max-width: 300px;
     text-align: center;
     font-size: 14px;
+    margin-top: -5px;
   }
   .book-cover img{
     height: 175px;
