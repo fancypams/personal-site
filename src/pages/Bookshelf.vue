@@ -2,7 +2,7 @@
   <div class="section-title">Books</div>
   <div class="section-subtitle">My latest reading shown utilizing the <a href="https://openlibrary.org/" target="_blank">open library</a> api</div>
   <div class="input-wrapper">
-    <input placeholder="Type to search by title" v-model="search" />
+    <input placeholder="Type to search" v-model="search" />
     <button v-if="search" @click="clearSearch" class="fa-solid fa-circle-xmark input-margin" ></button>
   </div>
   <div class="book-shelf" >
@@ -30,7 +30,7 @@ export default {
   computed: {
     filteredBooks() {
       return this.finished.filter(book => {
-        return book.title.toLowerCase().includes(this.search.toLowerCase());
+        return book.title.toLowerCase().includes(this.search.toLowerCase()) || book.author[0].toLowerCase().includes(this.search.toLowerCase());
       });
     }
   },
