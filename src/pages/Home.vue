@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import Masthead from './Masthead.vue'
+import Masthead from '@/components/Masthead.vue'
 
 export default {
   name: 'Home',

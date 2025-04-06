@@ -57,6 +57,9 @@ export default {
           case 'rain':
             this.iconClass.push('fa-cloud-showers-heavy');
             break;
+          case "default":
+            this.iconClass.push('fa-cloud-sun-rain');
+            break;
         }
       })
   },
