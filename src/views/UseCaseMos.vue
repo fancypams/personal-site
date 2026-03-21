@@ -61,8 +61,13 @@
 
 
       <h3 class="sub-heading">Live demo</h3>
-      <p class="uc-body">The screenshot below shows the populated menu board. The dark background is intentional for TV display readability. Icons indicate availability status, beer number, name, style, ABV, and all three pour sizes — all pulled live from a Google Sheet at runtime.</p>
+      <p class="uc-body" style="max-width:fit-content">The screenshot below shows a real invite from a Hawaii-themed happy hour. The site is mobile-first by design since guests receive the link via text.</p>
+      
       <div style="display:flex;justify-content:center;margin:1.5rem 0"><div style="max-width:260px;width:100%"><img src="../assets/mos.png" alt="Mo's Happy Hour mobile view" style="width:100%;display:block;"/></div></div>
+      <div class="case-meta" style="margin-top:1.5rem;display:flex;gap:1.5rem;flex-wrap:wrap">
+        <a href="http://mos.pamelamontanez.com/" target="_blank" class="card-link">View live site <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
+        <a href="https://github.com/fancypams/mos" target="_blank" class="card-link">View on GitHub <i class="fa-brands fa-github fa-xs"></i></a>
+      </div>
     </article>
   </UseCaseGate>
 </template>
