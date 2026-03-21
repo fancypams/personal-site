@@ -32,7 +32,7 @@ onMounted(() => {
 })
 
 function attempt() {
-  if (password.value === 'pft') {
+  if (password.value === 'pfft') {
     sessionStorage.setItem('uc-unlocked', '1')
     unlocked.value = true
     error.value = false
