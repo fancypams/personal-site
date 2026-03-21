@@ -43,5 +43,6 @@ nav { position:sticky; top:0; z-index:100; background:var(--cream); }
 .nav-dropdown-menu a { font-family:var(--font-mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-muted); padding:.75rem 1rem; border-bottom:1px solid var(--border-light); display:block; transition:background .15s, color .15s; text-decoration:none; }
 .nav-dropdown-menu a:last-child { border-bottom:none; }
 .nav-dropdown-menu a:hover { background:var(--white); color:var(--ink); }
-@media(max-width:600px) { .nav-links { gap:1.5rem; } .nav-links a, .nav-dropdown-trigger { font-size:.65rem; } }
+@media(max-width:420px) { .nav-home { display:none; } .nav-links { gap:.5rem; } .nav-links a, .nav-dropdown-trigger { font-size:.58rem; letter-spacing:.07em; } }
+@media(max-width:600px) { .nav-links { gap:.9rem; } .nav-links a, .nav-dropdown-trigger { font-size:.62rem; } }
 </style>

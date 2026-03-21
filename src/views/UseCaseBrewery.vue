@@ -7,13 +7,13 @@
 
       <div class="role-callout">
         <span class="red-label">Context</span>
-        <p>A brewery I had connections with needed a way to keep their tap list current across large TV displays in the beer hall and via QR code on phones, without paying for expensive digital signage software or requiring any technical knowledge to update. I built a prototype using Sheetrock.js and a Google Spreadsheet as the database. One sheet, one update, every screen reflects it instantly.</p>
+        <p>A brewery I had connections with needed a way to keep their tap list current across large TV displays in the beer hall and via QR code on phones — without paying for expensive digital signage software or requiring any technical knowledge to update. I built a prototype using Sheetrock.js and a Google Spreadsheet as the database. One sheet, one update, every screen reflects it instantly.</p>
       </div>
 
       <div class="problem-goal-grid">
         <div class="pg-block">
           <span class="block-label">The Problem</span>
-          <p>Brewery tap lists change constantly: kegs kick, seasonal beers rotate, prices shift. Printing new menus is wasteful and slow. Existing digital signage solutions are expensive, require vendor lock-in, and still need someone technical to manage. Staff needed to update the menu themselves without touching code.</p>
+          <p>Brewery tap lists change constantly — kegs kick, seasonal beers rotate, prices shift. Printing new menus is wasteful and slow. Existing digital signage solutions are expensive, require vendor lock-in, and still need someone technical to manage. Staff needed to update the menu themselves without touching code.</p>
         </div>
         <div class="pg-block">
           <span class="block-label">Goals</span>
@@ -40,7 +40,7 @@
           <i class="fa-solid fa-circle-check solution-icon"></i>
           <div>
             <strong>Tabletop.js pulls the data at runtime</strong>
-            <p>Sheetrock.js fetches the published Google Sheet as JSON and renders the beer list dynamically on page load. No server, no database, no build step. A static HTML file reads the spreadsheet directly. The page refreshes on an interval so TVs stay current without manual intervention.</p>
+            <p>Sheetrock.js fetches the published Google Sheet as JSON and renders the beer list dynamically on page load. No server, no database, no build step — a static HTML file reads the spreadsheet directly. The page refreshes on an interval so TVs stay current without manual intervention.</p>
           </div>
         </div>
         <div class="solution">
@@ -54,20 +54,16 @@
           <i class="fa-solid fa-circle-check solution-icon"></i>
           <div>
             <strong>No ongoing cost</strong>
-            <p>Google Sheets is free. The page is hosted as a static site. There are no subscriptions, no vendor contracts, no API fees. The only cost was the time to build it, and the brewery owned it completely.</p>
+            <p>Google Sheets is free. The page is hosted as a static site. There are no subscriptions, no vendor contracts, no API fees. The only cost was the time to build it — and the brewery owned it completely.</p>
           </div>
         </div>
       </div>
 
 
       <h3 class="sub-heading">Live demo</h3>
-      <p class="uc-body">The screenshot below shows the populated menu board. The dark background is intentional for TV display readability. Icons indicate availability status, beer number, name, style, ABV, and all three pour sizes, all pulled live from a Google Sheet at runtime.</p>
-      <div class="ui-compare-img-wrap" style="margin:1.5rem 0">
-        <img src="../assets/brewery.png" alt="Brewery menu board desktop view" style="width:100%;display:block;"/>
+      <p class="uc-body">The screenshot below shows the populated menu board. The dark background is intentional for TV display readability. Icons indicate availability status, beer number, name, style, ABV, and all three pour sizes — all pulled live from a Google Sheet at runtime.</p>
+      <div style="margin:1.5rem 0"><img src="../assets/brewery.png" alt="Brewery menu board desktop view" style="width:100%;display:block;max-height:600px;object-fit:contain;object-position:top;"/>
       </div>
-      <p style="margin-bottom:2rem">
-        <a href="https://bol.pamelamontanez.com" target="_blank" class="card-link">View live site <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
-      </p>
 
       <h3 class="sub-heading">Why it matters as a PM artifact</h3>
       <p class="uc-body">This project predates my formal PM career, but it demonstrates the instincts I bring to product work: identify a real user need, find the simplest possible solution, eliminate unnecessary cost and complexity, and build something the end user can actually own and operate. The same thinking I applied here, using existing tools in unexpected ways to solve a real problem without over-engineering it, is how I approach product decisions today.</p>
@@ -84,3 +80,4 @@
 <script setup>
 import UseCaseGate from '../components/UseCaseGate.vue'
 </script>
+

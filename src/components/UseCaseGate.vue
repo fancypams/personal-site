@@ -19,13 +19,27 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+
 const password = ref('')
 const error = ref(false)
 const unlocked = ref(false)
+
+onMounted(() => {
+  if (sessionStorage.getItem('uc-unlocked') === '1') {
+    unlocked.value = true
+  }
+})
+
 function attempt() {
-  if (password.value === "i'm in") { unlocked.value = true; error.value = false }
-  else { error.value = true; password.value = '' }
+  if (password.value === 'pft') {
+    sessionStorage.setItem('uc-unlocked', '1')
+    unlocked.value = true
+    error.value = false
+  } else {
+    error.value = true
+    password.value = ''
+  }
 }
 </script>
 
