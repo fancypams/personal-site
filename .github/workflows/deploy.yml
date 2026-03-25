@@ -19,7 +19,7 @@ jobs:
 
       - name: Pull DAO page from private repo
         run: |
-          GIT_SSH_COMMAND="ssh -i ~/.ssh/dao-deploy-key" git clone git@github.com:fancypams/dao-page-private.git temp-dao
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/dao-deploy-key" git clone git@github.com:fancypams/dao-private-page.git temp-dao
           cp temp-dao/UseCaseDAO.vue src/views/UseCaseDAO.vue
           rm -rf temp-dao
 
