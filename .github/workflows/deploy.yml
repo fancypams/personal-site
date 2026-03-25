@@ -1,17 +1,27 @@
 name: Build and Deploy to Bluehost
-
 on:
   push:
     branches:
       - main
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Setup SSH for private repo
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DAO_DEPLOY_KEY }}" > ~/.ssh/dao-deploy-key
+          chmod 600 ~/.ssh/dao-deploy-key
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Pull DAO page from private repo
+        run: |
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/dao-deploy-key" git clone git@github.com:fancypams/dao-page-private.git temp-dao
+          cp temp-dao/UseCaseDAO.vue src/views/UseCaseDAO.vue
+          rm -rf temp-dao
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
