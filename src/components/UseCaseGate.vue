@@ -32,7 +32,7 @@ onMounted(() => {
 })
 
 function attempt() {
-  if (password.value === "pft") {
+  if (password.value === import.meta.env.VITE_GATE_PASSWORD) {
     sessionStorage.setItem('uc-unlocked', '1')
     unlocked.value = true
     error.value = false
