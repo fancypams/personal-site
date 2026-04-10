@@ -47,10 +47,15 @@
 import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
 
-const COVER_OVERRIDES = {
+const BOOK_OVERRIDES = {
   'Between Two Fires': {
     sm: 'https://covers.openlibrary.org/b/olid/OL37583899M-M.jpg',
     lg: 'https://covers.openlibrary.org/b/olid/OL37583899M-L.jpg'
+  },
+  'We': {
+    sm: 'https://covers.openlibrary.org/b/olid/OL36013284M-M.jpg',
+    lg: 'https://covers.openlibrary.org/b/olid/OL36013284M-L.jpg',
+    author: 'Yevgeny Zamyatin'
   }
 }
 
@@ -64,12 +69,15 @@ const previewTitle = ref('')
 onMounted(async () => {
   try {
     const res = await axios.get('https://openlibrary.org/people/pamelamontanez/books/already-read.json')
-    books.value = res.data.reading_log_entries.map(e => ({
-      title: e.work.title,
-      author: e.work.author_names,
-      coverSm: COVER_OVERRIDES[e.work.title]?.sm ?? (e.work.cover_edition_key ? `https://covers.openlibrary.org/b/olid/${e.work.cover_edition_key}-M.jpg` : null),
-      coverLg: COVER_OVERRIDES[e.work.title]?.lg ?? (e.work.cover_edition_key ? `https://covers.openlibrary.org/b/olid/${e.work.cover_edition_key}-L.jpg` : null),
-    }))
+    books.value = res.data.reading_log_entries.map(e => {
+      const overrides = BOOK_OVERRIDES[e.work.title] ?? {}
+      return {
+        title: e.work.title,
+        author: overrides.author ? [overrides.author] : e.work.author_names,
+        coverSm: overrides.sm ?? (e.work.cover_edition_key ? `https://covers.openlibrary.org/b/olid/${e.work.cover_edition_key}-M.jpg` : null),
+        coverLg: overrides.lg ?? (e.work.cover_edition_key ? `https://covers.openlibrary.org/b/olid/${e.work.cover_edition_key}-L.jpg` : null),
+      }
+    })
   } catch (e) { console.error(e) }
   finally { loading.value = false }
 })
