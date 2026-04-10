@@ -52,7 +52,7 @@ const BOOK_OVERRIDES = {
     sm: 'https://covers.openlibrary.org/b/olid/OL37583899M-M.jpg',
     lg: 'https://covers.openlibrary.org/b/olid/OL37583899M-L.jpg'
   },
-  'We': {
+  'Мы': {
     sm: 'https://covers.openlibrary.org/b/olid/OL36013284M-M.jpg',
     lg: 'https://covers.openlibrary.org/b/olid/OL36013284M-L.jpg',
     author: 'Yevgeny Zamyatin'
